@@ -26,6 +26,10 @@
     background: rgba(255, 144, 14, 0.1);
 }
 
+.font-medium{
+    font-weight: 500;
+}
+
 .btn-primary{
     background: #FF900E;
     color: #ffffff;
@@ -34,14 +38,33 @@
     font-weight: 600;
     border: none;
     border-radius: 8px;
+    margin-top: 32px;
 
 }
 
+.colorful{
+    color: #FF900E;
+}
+
+
+.section-title{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+main > section{
+    margin-top: 80px;
+}
+
+
+
 
 /* Header Styles */
-
-
-
 /* NavBar Styles */
 .brand{
     font-weight: 700;
@@ -88,10 +111,103 @@
 }
 
 
+/* Team & feature Styling */
+
+.team{
+    align-items: center;
+}
+
+.team-img-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 24px;
+}
+
+.features{
+    margin-left: 73px;
+    max-width: 530px;
+}
+
+
+
+/* Facts Styling */
+
+
+.facts-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    
+}
+
+.facts-description{
+    max-width: 542px;
+}
+
+
+.fact{
+    border:1px solid #FF900E;
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.fact-number{
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 5px;
+
+}
+
+.fact-name{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+
+
+
+
 /* Responsive Media query */
 
 @media screen and (max-width: 576px) {
-    .nav-bar, .nav-links {
+    .nav-bar, 
+    .nav-links, 
+    .team {
         flex-direction: column;
+    }
+
+    .team-img-container{
+        grid-template-columns: repeat(1,1fr);
+     
+    }
+
+    .features {
+        margin-left: 20px;
+        padding: 20px;
+    }
+
+
+
+}
+
+/* Medium Size Device */
+
+@media  screen and (min-width: 576px) and (max-width: 992px) {
+    .team{
+        flex-direction: column;
+    }
+    .features{
+        /* margin-left: 73px; */
+        max-width: 1440px;
+        padding: 73px;
+        margin-right: 73px;
+        margin-left: 73px;
     }
 }
